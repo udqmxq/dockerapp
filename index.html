@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Mini project of Davron Abduvahobov</title>
+</head>
+<body>
+    <h1>Mini project of Davron Abduvahobov</h1>
+    <form method="get">
+        <label for="level">Choose Level:</label>
+        <select name="level" id="level">
+            <option value="Undergraduate">Undergraduate</option>
+            <option value="Graduate">Graduate</option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+    <table border="1">
+        <tr>
+            <th>Course Name</th>
+            <th>Code</th>
+            <th>Level</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Day</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ course[1] }}</td>
+            <td>{{ course[2] }}</td>
+            <td>{{ course[3] }}</td>
+            <td>{{ course[4] }}</td>
+            <td>{{ course[5] }}</td>
+            <td>{{ course[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
